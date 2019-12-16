@@ -77,6 +77,11 @@ public class CollectionActivity extends AppCompatActivity implements NavigationV
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new AllCategoriesFragment()).commit();
                 break;
+
+            case R.id.nav_favourites:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new FavouriteFragment()).commit();
+                break;
         }
 
         drawer.closeDrawer(GravityCompat.START);
