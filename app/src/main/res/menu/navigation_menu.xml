@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/group_all"
+        android:checkableBehavior="single" >
+
+        <item android:title="All categories"
+        android:id="@+id/nav_all_categories" />
+
+    </group>
+
+    <group android:id="@+id/group_main"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dresses"
+            android:icon="@android:drawable/ic_input_add"
+            android:title="Dresses" />
+
+        <item
+            android:id="@+id/nav_tops"
+            android:icon="@android:drawable/ic_input_add"
+            android:title="Tops" />
+
+        <item
+            android:id="@+id/nav_jeans"
+            android:icon="@android:drawable/ic_input_add"
+            android:title="Jeans" />
+
+        <item
+            android:id="@+id/nav_skirts"
+            android:icon="@android:drawable/ic_input_add"
+            android:title="Skirts" />
+
+        <item
+            android:id="@+id/nav_trousers"
+            android:icon="@android:drawable/ic_input_add"
+            android:title="Trousers" />
+
+        <item
+            android:id="@+id/nav_shorts"
+            android:icon="@android:drawable/ic_input_add"
+            android:title="Shorts" />
+
+    </group>
+
+    <group android:id="@+id/group_service"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_favourites"
+            android:icon="@drawable/baseline_favorite_black_24"
+            android:title="Favourites" />
+
+        <item
+            android:id="@+id/nav_cart"
+            android:icon="@drawable/baseline_shopping_cart_black_24"
+            android:title="My Cart" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/baseline_exit_to_app_black_24"
+            android:title="Log out" />
+
+    </group>
+
+</menu>
