@@ -20,7 +20,7 @@ public class DressGridAdapter extends BaseAdapter {
         this.context = applicationContext;
         this.dresses = dresses;
         this.prices = prices;
-        inflater = (LayoutInflater.from(applicationContext));/////////////// check application context if the app crashes
+        inflater = (LayoutInflater.from(applicationContext));       // check application context if the app crashes
     }
 
 
@@ -48,9 +48,7 @@ public class DressGridAdapter extends BaseAdapter {
         ImageView oneItemImage = convertView.findViewById(R.id.grid_item_image);
         TextView oneItemPrice = convertView.findViewById(R.id.grid_item_price);
         final ImageView likeBtn = convertView.findViewById(R.id.like_btn);
-        likeBtn.setTag("x");
-
-
+        final boolean[] status = {true};
 
         oneItemImage.setImageResource(dresses[position]);
         oneItemPrice.setText(prices[position]);
@@ -59,7 +57,15 @@ public class DressGridAdapter extends BaseAdapter {
             @Override
             public void onClick(View v) {
 
-                likeBtn.setImageResource(R.mipmap.like_icon);
+                if (status[0]) {
+
+                    likeBtn.setImageResource(R.mipmap.like_icon);
+                    status[0] = false;
+                } else {
+
+                    likeBtn.setImageResource(R.mipmap.unlike_icon);
+                    status[0] = true;
+                }
 
             }
         });

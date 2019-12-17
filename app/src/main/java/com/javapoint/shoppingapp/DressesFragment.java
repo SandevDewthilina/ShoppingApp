@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ImageView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,6 +17,7 @@ import android.widget.GridView;
 public class DressesFragment extends Fragment {
 
     private GridView grid_list_view;
+    private ImageView likeBtn;
 
     int dresses[] = {R.drawable.dress_1, R.drawable.dress_2, R.drawable.dress_3, R.drawable.dress_4, R.drawable.dress_5, R.drawable.dress_6, R.drawable.dress_7, R.drawable.dress_8, R.drawable.dress_9, R.drawable.dress_10};
     String prices[] ={"2550/=", "2699/=", "3650/=", "4599/=", "5899/=", "1250/=", "3250/=", "4500/=", "3000/=", "3100/="};
@@ -32,8 +34,10 @@ public class DressesFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_dresses, container, false);
 
         grid_list_view = view.findViewById(R.id.dress_grid_view);
+        likeBtn = view.findViewById(R.id.like_btn);
 
-        DressGridAdapter dressGridAdapter = new DressGridAdapter(getContext(), dresses, prices); //////////check used getccontex instead of getApplicationContext
+
+        DressGridAdapter dressGridAdapter = new DressGridAdapter(getContext(), dresses, prices);            //check used getccontex instead of getApplicationContext
         grid_list_view.setAdapter(dressGridAdapter);
 
         // create onClickListner for the grid
@@ -50,6 +54,8 @@ public class DressesFragment extends Fragment {
 
             }
         });
+
+
 
 
         return view;
