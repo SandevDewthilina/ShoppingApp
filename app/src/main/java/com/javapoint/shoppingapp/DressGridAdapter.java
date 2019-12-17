@@ -48,6 +48,9 @@ public class DressGridAdapter extends BaseAdapter {
         ImageView oneItemImage = convertView.findViewById(R.id.grid_item_image);
         TextView oneItemPrice = convertView.findViewById(R.id.grid_item_price);
         final ImageView likeBtn = convertView.findViewById(R.id.like_btn);
+        likeBtn.setTag("x");
+
+
 
         oneItemImage.setImageResource(dresses[position]);
         oneItemPrice.setText(prices[position]);
@@ -56,10 +59,7 @@ public class DressGridAdapter extends BaseAdapter {
             @Override
             public void onClick(View v) {
 
-
-
-                    likeBtn.setImageResource(R.mipmap.like_icon);
-
+                likeBtn.setImageResource(R.mipmap.like_icon);
 
             }
         });
