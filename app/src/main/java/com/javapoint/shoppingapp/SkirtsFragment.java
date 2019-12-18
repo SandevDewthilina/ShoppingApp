@@ -20,6 +20,7 @@ public class SkirtsFragment extends Fragment {
 
     int skirts[] = {R.drawable.skirts_1, R.drawable.skirts_2, R.drawable.skirts_3, R.drawable.skirts_4, R.drawable.skirts_5, R.drawable.skirts_6, R.drawable.skirts_7, R.drawable.skirts_8, R.drawable.skirts_9, R.drawable.skirts_10};
     String prices[] ={"2550/=", "2699/=", "3650/=", "4599/=", "5899/=", "1250/=", "3250/=", "4500/=", "3000/=", "3100/="};
+    boolean likedSkirts[] = {false, false, false, false, false, false, false, false, false, false};
 
     public SkirtsFragment() {
         // Required empty public constructor
@@ -34,7 +35,7 @@ public class SkirtsFragment extends Fragment {
 
         grid_list_view = view.findViewById(R.id.skirts_grid_view);
 
-        SkirtsGridAdapter skirtsGridAdapter = new SkirtsGridAdapter(getContext(), skirts, prices); //////////check used getccontex instead of getApplicationContext
+        SkirtsGridAdapter skirtsGridAdapter = new SkirtsGridAdapter(getContext(), skirts, prices, likedSkirts); //////////check used getccontex instead of getApplicationContext
         grid_list_view.setAdapter(skirtsGridAdapter);
 
         // create onClickListner for the grid
@@ -46,6 +47,7 @@ public class SkirtsFragment extends Fragment {
 
                 previewIntent.putExtra("image", skirts[position]);
                 previewIntent.putExtra("price", prices[position]);
+                previewIntent.putExtra("liked", likedSkirts[position]);
 
                 startActivity(previewIntent);
 

@@ -21,6 +21,7 @@ public class ShortsFragment extends Fragment {
 
     int shorts[] = {R.drawable.shorts_1, R.drawable.shorts_2, R.drawable.shorts_3, R.drawable.shorts_4, R.drawable.shorts_5, R.drawable.shorts_6, R.drawable.shorts_7, R.drawable.shorts_8, R.drawable.shorts_9, R.drawable.shorts_10};
     String prices[] ={"2550/=", "2699/=", "3650/=", "4599/=", "5899/=", "1250/=", "3250/=", "4500/=", "3000/=", "3100/="};
+    boolean likedShorts[] = {false, false, false, false, false, false, false, false, false, false};
 
     public ShortsFragment() {
         // Required empty public constructor
@@ -35,7 +36,7 @@ public class ShortsFragment extends Fragment {
 
         grid_list_view = view.findViewById(R.id.shorts_grid_view);
 
-        ShortsGridAdapter shortsGridAdapter = new ShortsGridAdapter(getContext(), shorts, prices); //////////check used getccontex instead of getApplicationContext
+        ShortsGridAdapter shortsGridAdapter = new ShortsGridAdapter(getContext(), shorts, prices, likedShorts); //////////check used getccontex instead of getApplicationContext
         grid_list_view.setAdapter(shortsGridAdapter);
 
         // create onClickListner for the grid
@@ -47,6 +48,7 @@ public class ShortsFragment extends Fragment {
 
                 previewIntent.putExtra("image", shorts[position]);
                 previewIntent.putExtra("price", prices[position]);
+                previewIntent.putExtra("liked", likedShorts[position]);
 
                 startActivity(previewIntent);
 

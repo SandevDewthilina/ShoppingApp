@@ -20,6 +20,7 @@ public class TrousersFragment extends Fragment {
 
     int trousers[] = {R.drawable.trousers_1, R.drawable.trousers_2, R.drawable.trousers_3, R.drawable.trousers_4, R.drawable.trousers_5, R.drawable.trousers_6, R.drawable.trousers_7, R.drawable.trousers_8, R.drawable.trousers_9, R.drawable.trousers_10};
     String prices[] ={"2550/=", "2699/=", "3650/=", "4599/=", "5899/=", "1250/=", "3250/=", "4500/=", "3000/=", "3100/="};
+    boolean likedTrousers[] = {false, false, false, false, false, false, false, false, false, false};
 
     public TrousersFragment() {
         // Required empty public constructor
@@ -34,7 +35,7 @@ public class TrousersFragment extends Fragment {
 
         grid_list_view = view.findViewById(R.id.trousers_grid_view);
 
-        TrousersGridAdapter trousersGridAdapter = new TrousersGridAdapter(getContext(), trousers, prices); //////////check used getccontex instead of getApplicationContext
+        TrousersGridAdapter trousersGridAdapter = new TrousersGridAdapter(getContext(), trousers, prices, likedTrousers); //////////check used getccontex instead of getApplicationContext
         grid_list_view.setAdapter(trousersGridAdapter);
 
         // create onClickListner for the grid
@@ -46,6 +47,7 @@ public class TrousersFragment extends Fragment {
 
                 previewIntent.putExtra("image", trousers[position]);
                 previewIntent.putExtra("price", prices[position]);
+                previewIntent.putExtra("liked", likedTrousers[position]);
 
                 startActivity(previewIntent);
 

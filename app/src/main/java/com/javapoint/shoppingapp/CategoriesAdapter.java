@@ -51,37 +51,37 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Vi
                 if (categoryId.equals("cat_dresses")) {
 
                     FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
-                    manager.beginTransaction().replace(R.id.fragment_container, new DressesFragment()).commit();
+                    manager.beginTransaction().replace(R.id.fragment_container, new DressesFragment()).addToBackStack(null).commit();
                 }
 
                 if (categoryId.equals("cat_tops")) {
 
                     FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
-                    manager.beginTransaction().replace(R.id.fragment_container, new TopsFragment()).commit();
+                    manager.beginTransaction().replace(R.id.fragment_container, new TopsFragment()).addToBackStack(null).commit();
                 }
 
                 if (categoryId.equals("cat_jeans")) {
 
                     FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
-                    manager.beginTransaction().replace(R.id.fragment_container, new JeansFragment()).commit();
+                    manager.beginTransaction().replace(R.id.fragment_container, new JeansFragment()).addToBackStack(null).commit();
                 }
 
                 if (categoryId.equals("cat_skirts")) {
 
                     FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
-                    manager.beginTransaction().replace(R.id.fragment_container, new SkirtsFragment()).commit();
+                    manager.beginTransaction().replace(R.id.fragment_container, new SkirtsFragment()).addToBackStack(null).commit();
                 }
 
                 if (categoryId.equals("cat_trousers")) {
 
                     FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
-                    manager.beginTransaction().replace(R.id.fragment_container, new TrousersFragment()).commit();
+                    manager.beginTransaction().replace(R.id.fragment_container, new TrousersFragment()).addToBackStack(null).commit();
                 }
 
                 if (categoryId.equals("cat_shorts")) {
 
                     FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
-                    manager.beginTransaction().replace(R.id.fragment_container, new ShortsFragment()).commit();
+                    manager.beginTransaction().replace(R.id.fragment_container, new ShortsFragment()).addToBackStack(null).commit();
                 }
 
             }
@@ -96,37 +96,37 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Vi
                 if (categoryId.equals("cat_dresses")) {
 
                     FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
-                    manager.beginTransaction().replace(R.id.fragment_container, new DressesFragment()).commit();
+                    manager.beginTransaction().replace(R.id.fragment_container, new DressesFragment()).addToBackStack(null).commit();
                 }
 
                 if (categoryId.equals("cat_tops")) {
 
                     FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
-                    manager.beginTransaction().replace(R.id.fragment_container, new TopsFragment()).commit();
+                    manager.beginTransaction().replace(R.id.fragment_container, new TopsFragment()).addToBackStack(null).commit();
                 }
 
                 if (categoryId.equals("cat_jeans")) {
 
                     FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
-                    manager.beginTransaction().replace(R.id.fragment_container, new JeansFragment()).commit();
+                    manager.beginTransaction().replace(R.id.fragment_container, new JeansFragment()).addToBackStack(null).commit();
                 }
 
                 if (categoryId.equals("cat_skirts")) {
 
                     FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
-                    manager.beginTransaction().replace(R.id.fragment_container, new SkirtsFragment()).commit();
+                    manager.beginTransaction().replace(R.id.fragment_container, new SkirtsFragment()).addToBackStack(null).commit();
                 }
 
                 if (categoryId.equals("cat_trousers")) {
 
                     FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
-                    manager.beginTransaction().replace(R.id.fragment_container, new TrousersFragment()).commit();
+                    manager.beginTransaction().replace(R.id.fragment_container, new TrousersFragment()).addToBackStack(null).commit();
                 }
 
                 if (categoryId.equals("cat_shorts")) {
 
                     FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
-                    manager.beginTransaction().replace(R.id.fragment_container, new ShortsFragment()).commit();
+                    manager.beginTransaction().replace(R.id.fragment_container, new ShortsFragment()).addToBackStack(null).commit();
                 }
 
             }

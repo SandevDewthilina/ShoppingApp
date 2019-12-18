@@ -21,7 +21,6 @@ public class ImageViewActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.preview_titlebar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Your Choice");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         previewImage = findViewById(R.id.preview_image);
         previewPrice = findViewById(R.id.preview_price);

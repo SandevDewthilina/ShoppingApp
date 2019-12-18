@@ -4,11 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".ImageViewActivity">
-
-    <include
-        android:id="@+id/preview_titlebar"
-        layout="@layout/default_titlebar" />
 
     <ImageView
         android:id="@+id/preview_image"
@@ -56,4 +53,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/preview_image"
         app:srcCompat="@mipmap/unlike_icon" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/preview_titlebar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

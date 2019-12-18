@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,6 +24,7 @@ public class AllCategoriesFragment extends Fragment {
     private RecyclerView categories_list_view;
     private ArrayList<Category> categoriesArrayList;
     private  CategoriesAdapter categoriesAdapter;
+    private Toolbar toolbar;
 
 
 
@@ -41,6 +43,9 @@ public class AllCategoriesFragment extends Fragment {
         categoriesArrayList = new ArrayList<>();
 
         categories_list_view = view.findViewById(R.id.categories_list_view);
+        toolbar = view.findViewById(R.id.all_category_toolbar);
+        toolbar.setTitle("All categories");
+
 
         Category cat1 = new Category();
         cat1.setId("cat_dresses");
