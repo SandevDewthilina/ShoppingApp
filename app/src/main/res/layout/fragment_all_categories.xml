@@ -7,9 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".AllCategoriesFragment">
 
-    <include android:id="@+id/all_category_toolbar"
-        layout="@layout/default_titlebar" />
-
     <android.support.v7.widget.RecyclerView
         android:id="@+id/categories_list_view"
         android:layout_width="0dp"
@@ -18,7 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/all_category_toolbar" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 

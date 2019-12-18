@@ -23,7 +23,7 @@ public class CollectionActivity extends AppCompatActivity implements NavigationV
 
         Toolbar toolbar = findViewById(R.id.collection_toolbar);
         setSupportActionBar(toolbar);
-       // getSupportActionBar().setTitle("Store");
+        getSupportActionBar().setTitle("Store");
 
         drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.navigation_drawer);
@@ -88,32 +88,32 @@ public class CollectionActivity extends AppCompatActivity implements NavigationV
 
             case R.id.nav_shorts:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new ShortsFragment()).commit();
+                        new ShortsFragment()).addToBackStack(null).commit();
                 break;
 
             case R.id.nav_skirts:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new SkirtsFragment()).commit();
+                        new SkirtsFragment()).addToBackStack(null).commit();
                 break;
 
             case R.id.nav_tops:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new TopsFragment()).commit();
+                        new TopsFragment()).addToBackStack(null).commit();
                 break;
 
             case R.id.nav_trousers:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new TrousersFragment()).commit();
+                        new TrousersFragment()).addToBackStack(null).commit();
                 break;
 
             case R.id.nav_all_categories:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new AllCategoriesFragment()).commit();
+                        new AllCategoriesFragment()).addToBackStack(null).commit();
                 break;
 
             case R.id.nav_favourites:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new FavouriteFragment()).commit();
+                        new FavouriteFragment()).addToBackStack(null).commit();
                 break;
         }
 

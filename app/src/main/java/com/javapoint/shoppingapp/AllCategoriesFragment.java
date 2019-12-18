@@ -43,8 +43,8 @@ public class AllCategoriesFragment extends Fragment {
         categoriesArrayList = new ArrayList<>();
 
         categories_list_view = view.findViewById(R.id.categories_list_view);
-        toolbar = view.findViewById(R.id.all_category_toolbar);
-        toolbar.setTitle("All categories");
+        //toolbar = view.findViewById(R.id.all_category_toolbar);
+        //toolbar.setTitle("All categories");
 
 
         Category cat1 = new Category();
