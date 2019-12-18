@@ -10,7 +10,7 @@ import android.widget.TextView;
 public class ImageViewActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
-    private ImageView previewImage;
+    private ImageView previewImage, likeView;
     private TextView previewPrice;
 
     @Override
@@ -25,11 +25,22 @@ public class ImageViewActivity extends AppCompatActivity {
 
         previewImage = findViewById(R.id.preview_image);
         previewPrice = findViewById(R.id.preview_price);
+        likeView = findViewById(R.id.large_like_btn);
 
         Intent intent = getIntent();
 
-        previewPrice.setText(intent.getStringExtra("price"));
+        if (intent.getBooleanExtra("liked", false)) {
+
+            likeView.setImageResource(R.mipmap.like_icon);
+
+        } else {
+
+            likeView.setImageResource(R.mipmap.unlike_icon);
+
+        }
+
         previewImage.setImageResource(intent.getIntExtra("image", 0));
+        previewPrice.setText(intent.getStringExtra("price"));
 
     }
 }
